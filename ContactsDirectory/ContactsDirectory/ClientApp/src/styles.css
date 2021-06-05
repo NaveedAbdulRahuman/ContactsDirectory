@@ -1,0 +1,43 @@
+tr {
+  background-color: antiquewhite;
+}
+
+tbody tr:hover {
+  background-color: aqua;
+  cursor: grab;
+}
+
+.fal {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+}
+
+span.fal {
+  font-size: 15px !important;
+  color: #0099cc !important;
+}
+
+.fa-arrow-left {
+  border: solid #0099cc;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important
+}
+
+.mrl-div {
+  margin: 0 35px;
+  opacity: 0.5;
+  font-size: 20px;
+}
+
+.align-items-center {
+  -ms-flex-align: center !important;
+  align-items: center !important
+}

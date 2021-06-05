@@ -1,0 +1,28 @@
+<h1>Contacts List</h1>
+
+<p>Click on the Contact for more details</p>
+
+<p *ngIf="!contacts"><em>Loading...</em></p>
+
+<div class="div-filter">
+  <p><span class="filter-label">Filter By Name : </span><span class="spn-filtertxt"><input id="txtFilterByName" type="text" (keyup)="searchContacts($event)"></span></p>
+  <p><span class="filter-label">Filtered By Text : </span><span class="spn-filterlabel"> {{filterText}} </span> </p>
+</div>
+
+
+<table class='table' *ngIf="contacts">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email Address</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts" (click)='viewContact(contact.contactId)'>
+      <td>{{ contact.name }}</td>
+      <td>{{ contact.emailAddress }}</td>
+      <td>{{ contact.phoneNumber }}</td>
+    </tr>
+  </tbody>
+</table>
